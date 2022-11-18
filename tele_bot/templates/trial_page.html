@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <table class="table table-bordered">
+        {% for i in data %}
+        <tr>
+            <th>Quote ID</th>
+            <td>{{i.quote_id}}</td>
+        </tr>
+        <tr>
+            <th>Full Name</th>
+            <td>{{i.full_name}}</td>
+        </tr>
+        <tr>
+            <th>Mobile No</th>
+            <td>{{i.mobile_no}}</td>
+        </tr>
+        <tr>
+            <th>Date of Birth</th>
+            <td>{{i.dob}}</td>
+        </tr>
+        <tr>
+            <th>Gender</th>
+            <td>{{i.gender}}</td>
+        </tr>
+        <tr>
+            <th>Education</th>
+            <td>{{i.education}}</td>
+        </tr>
+        <tr>
+            <th>Occupation</th>
+            <td>{{i.occupation}}</td>
+        </tr>
+        <tr>
+            <th>Salary</th>
+            <td>{{i.salary}}</td>
+        </tr>
+        <tr>
+            <th>Aadhar Card</th>
+            <td><a href = file://{{i.file_1}} target="_blank">Aadhar Card</a></td>
+        </tr>
+        <tr>
+            <th>Pan Card</th>
+            <td><a href = file://{{i.file_2}} target="_blank">Pan Card</a></td>
+        </tr>
+        <tr>
+            <th>Salary Slip</th>
+            <td><a href = file://{{i.file_3}} target="_blank">Salary Slip</a></td>
+        </tr>
+       
+        <tr>
+            <td id="mobile_no">
+                <form action="" method="post">
+                    <button >Approve</button>
+                </form>
+
+            </td>
+        </tr>
+  
+        {% endfor %}
+    </table>
+</body>
+</html>

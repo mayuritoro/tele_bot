@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <table class="table table-bordered">
+        <tr>
+            <th>Quote ID</th>
+            <th>Full Name</th>
+            <th>Mobile No</th>
+            <th>Date of Birth</th>
+            <th>Gender</th>
+            <th>Education</th>
+            <th>Occupation</th>
+            <th>Salary</th>
+            <th>Aadhar Card</th>
+            <th>Pan Card</th>
+            <th>Salary Slip</th>
+        </tr>
+        {% for i in data %}
+        <tr>
+            <td>{{i.quote_id}}</td>
+            <td>{{i.full_name}}</td>
+            <td>{{i.mobile_no}}</td>         
+            <td>{{i.dob}}</td>
+            <td>{{i.gender}}</td>
+            <td>{{i.education}}</td>
+            <td>{{i.occupation}}</td>
+            <td>{{i.salary}}</td>
+            <td><a href = file://{{i.file_1}} target="_blank">Aadhar Card</a></td>
+            <td><a href = file://{{i.file_2}} target="_blank">Pan Card</a></td>
+            <td><a href = file://{{i.file_3}} target="_blank">Salary Slip</a></td>
+            <td>
+                <form action="" method="post">
+                    <button >Click</button>
+                </form>
+
+            </td>
+        </tr>
+  
+        {% endfor %}
+    </table>
+</body>
+</html>
